@@ -1,0 +1,2 @@
+# Konfigürasyon dosyalarına doğrudan HTTP erişimini engelle
+Require all denied

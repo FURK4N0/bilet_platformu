@@ -1,0 +1,2 @@
+# Bu dosya logs klasörünün Git tarafından izlenebilmesi için tutulmaktadır.
+# İçerideki *.log dosyaları .gitignore tarafından yoksayılır ve GitHub'a yüklenmez.

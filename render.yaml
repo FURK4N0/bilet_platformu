@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: bilet-platformu
+    runtime: docker
+    plan: free
+    region: frankfurt

@@ -1,0 +1,12 @@
+# Güvenlik Yapılandırması: Veritabanı ve kritik dosyalara doğrudan erişimi engelle
+<FilesMatch "\.(db|sqlite|sqlite3|sql|log|env|ini)$">
+    Require all denied
+</FilesMatch>
+
+# Gizli dosyalara (.git, .env vb.) erişimi engelle
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# Dizin listelemeyi kapat
+Options -Indexes
