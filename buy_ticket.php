@@ -1,11 +1,13 @@
 <?php
-$page_title = 'Koltuk Seçimi & Bilet Satın Al';
-require_once 'includes/header.php';
+if (!defined('APP_ROOT')) {
+    define('APP_ROOT', __DIR__);
+}
+require_once APP_ROOT . '/config/init.php';
 
 // Güvenlik: Kullanıcı giriş yapmamışsa yönlendir
 if (!isset($_SESSION['user_id'])) {
     set_flash('error', 'Bilet satın alabilmek için lütfen önce giriş yapınız.');
-    header("Location: login.php");
+    header("Location: /login.php");
     exit();
 }
 
@@ -13,9 +15,12 @@ $trip_id = trim($_GET['trip_id'] ?? '');
 
 if (empty($trip_id)) {
     set_flash('error', 'Geçersiz sefer seçimi.');
-    header("Location: index.php");
+    header("Location: /index.php");
     exit();
 }
+
+$page_title = 'Koltuk Seçimi & Bilet Satın Al';
+require_once APP_ROOT . '/includes/header.php';
 
 // Sefer ve Firma Bilgilerini Getir
 $stmt = $pdo->prepare("

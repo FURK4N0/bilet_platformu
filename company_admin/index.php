@@ -1,12 +1,17 @@
 <?php
-$page_title = 'Firma Yönetim Paneli';
-require_once '../includes/header.php';
+if (!defined('APP_ROOT')) {
+    define('APP_ROOT', dirname(__DIR__));
+}
+require_once APP_ROOT . '/config/init.php';
 
 // Güvenlik Kontrolü
 if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] !== 'company_admin') {
     header("Location: /index.php");
     exit();
 }
+
+$page_title = 'Firma Yönetim Paneli';
+require_once APP_ROOT . '/includes/header.php';
 
 // Firma yetkilisinin şirket ve profil bilgilerini al
 $stmt_user = $pdo->prepare(

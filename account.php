@@ -1,12 +1,17 @@
 <?php
-$page_title = 'Hesabım & Biletlerim - Bilet Platformu';
-require_once 'includes/header.php';
+if (!defined('APP_ROOT')) {
+    define('APP_ROOT', __DIR__);
+}
+require_once APP_ROOT . '/config/init.php';
 
 if (!isset($_SESSION['user_id'])) {
     set_flash('error', 'Hesabınızı görüntülemek için lütfen giriş yapın.');
-    header("Location: login.php");
+    header("Location: /login.php");
     exit();
 }
+
+$page_title = 'Hesabım & Biletlerim - Bilet Platformu';
+require_once APP_ROOT . '/includes/header.php';
 
 $user_id = $_SESSION['user_id'];
 

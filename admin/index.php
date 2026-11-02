@@ -1,12 +1,17 @@
 <?php
-$page_title = 'Sistem Yönetim Paneli - Bilet Platformu';
-require_once '../includes/header.php';
+if (!defined('APP_ROOT')) {
+    define('APP_ROOT', dirname(__DIR__));
+}
+require_once APP_ROOT . '/config/init.php';
 
 // Güvenlik Kontrolü
 if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] !== 'admin') {
     header("Location: /index.php");
     exit();
 }
+
+$page_title = 'Sistem Yönetim Paneli - Bilet Platformu';
+require_once APP_ROOT . '/includes/header.php';
 
 // İstatistikler
 $total_companies = $pdo->query("SELECT COUNT(*) FROM Bus_Company")->fetchColumn();
