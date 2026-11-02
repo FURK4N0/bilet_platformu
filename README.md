@@ -3,8 +3,12 @@
 [![Sürüm](https://img.shields.io/badge/Sürüm-v1.0.0-brightgreen.svg?style=for-the-badge)](https://github.com/FURK4N0/bilet_platformu/releases)
 [![PHP](https://img.shields.io/badge/PHP-8.2%20%7C%208.3-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
 [![SQLite](https://img.shields.io/badge/SQLite-3.x-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://www.sqlite.org/)
+[![Canlı Demo](https://img.shields.io/badge/Canlı%20Demo-Online-success?style=for-the-badge&logo=render)](https://bilet-platformu.onrender.com)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
 [![Lisans](https://img.shields.io/badge/Lisans-MIT-orange?style=for-the-badge)](LICENSE)
+
+> **🌐 Canlı Dağıtım (Live Demo):** Platform Render.com bulut altyapısı üzerinde aktif olarak yayındadır:  
+> 👉 [https://bilet-platformu.onrender.com](https://bilet-platformu.onrender.com)
 
 Çoklu otobüs firması desteği, rol tabanlı yetkilendirme (RBAC), ACID işlem güvenliği, eşzamanlı rezervasyonlarda yarış durumu (race condition) korumalı geçici koltuk kilitleme mekanizması ve PDF bilet üretim altyapısına sahip web tabanlı biletleme platformu.
 
